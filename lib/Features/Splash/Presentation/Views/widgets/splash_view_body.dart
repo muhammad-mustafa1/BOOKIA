@@ -1,4 +1,4 @@
-import 'package:bookia/Features/home/presentation/views/widgets/home_view.dart';
+import 'package:bookia/Features/home/presentation/views/home_view.dart';
 import 'package:bookia/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
