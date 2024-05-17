@@ -1,8 +1,8 @@
 import 'package:bookia/Core/assets.dart';
 import 'package:flutter/material.dart';
 
-class CustomListViewItem extends StatelessWidget {
-  const CustomListViewItem({
+class FeaturedListViewItem extends StatelessWidget {
+  const FeaturedListViewItem({
     super.key,
   });
 
