@@ -1,4 +1,4 @@
-import 'package:bookia/Core/assets.dart';
+import 'package:bookia/Core/Utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedListViewItem extends StatelessWidget {

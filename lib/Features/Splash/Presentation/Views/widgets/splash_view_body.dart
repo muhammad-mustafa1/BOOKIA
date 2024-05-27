@@ -1,7 +1,6 @@
-import 'package:bookia/Features/home/presentation/views/home_view.dart';
-import 'package:bookia/constants.dart';
+import 'package:bookia/Core/Utils/app_router.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -31,14 +30,14 @@ class _SplashViewBodyState extends State<SplashViewBody> {
 
   void navigateToHome() {
     Future.delayed(
-      const Duration(
-        seconds: 3,
-      ),
-      () => Get.to(
-        () => const HomeView(),
-        transition: Transition.fadeIn,
-        duration: kTransitionDuration,
-      ),
-    );
+        const Duration(seconds: 3),
+        () =>
+            // Get.to(
+            //   () => const HomeView(),
+            //   transition: Transition.fadeIn,
+            //   duration: kTransitionDuration,
+            // ),
+
+            GoRouter.of(context).push(AppRouter.kHomeView));
   }
 }

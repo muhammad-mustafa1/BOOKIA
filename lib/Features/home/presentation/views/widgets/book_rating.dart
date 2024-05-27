@@ -1,5 +1,4 @@
 import 'package:bookia/Core/Utils/styles.dart';
-import 'package:bookia/Features/home/presentation/views/widgets/best_seller_list_view_item.dart';
 import 'package:flutter/material.dart';
 
 class BookRating extends StatelessWidget {

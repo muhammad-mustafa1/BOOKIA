@@ -1,7 +1,6 @@
-import 'package:bookia/Features/Splash/Presentation/Views/splash_view.dart';
+import 'package:bookia/Core/Utils/app_router.dart';
 import 'package:bookia/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -13,7 +12,8 @@ class Bookia extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
@@ -22,7 +22,6 @@ class Bookia extends StatelessWidget {
           ThemeData.dark().textTheme,
         ),
       ),
-      home: const SplashView(),
     );
   }
 }

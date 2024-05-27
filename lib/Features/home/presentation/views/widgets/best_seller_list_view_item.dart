@@ -1,5 +1,5 @@
 import 'package:bookia/Core/Utils/styles.dart';
-import 'package:bookia/Core/assets.dart';
+import 'package:bookia/Core/Utils/assets.dart';
 import 'package:bookia/Features/home/presentation/views/widgets/book_rating.dart';
 import 'package:bookia/constants.dart';
 import 'package:flutter/material.dart';
