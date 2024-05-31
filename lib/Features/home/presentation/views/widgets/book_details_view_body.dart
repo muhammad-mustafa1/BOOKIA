@@ -1,3 +1,4 @@
+import 'package:bookia/Core/Utils/styles.dart';
 import 'package:bookia/Features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
 import 'package:bookia/Features/home/presentation/views/widgets/custom_book_item.dart';
 import 'package:flutter/material.dart';
@@ -16,8 +17,21 @@ class BookDetailsViewBody extends StatelessWidget {
           children: [
             const CustomBookDetailsAppBar(),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: width * .15),
+              padding: EdgeInsets.symmetric(horizontal: width * .2),
               child: const CustomBookImage(),
+            ),
+            const SizedBox(height: 43),
+            const Text('The Jungle Book', style: Styles.textStyle30),
+            const SizedBox(height: 6),
+            Opacity(
+              opacity: .7,
+              child: Text(
+                'Rudyard Kipling',
+                style: Styles.textStyle18.copyWith(
+                  fontWeight: FontWeight.w500,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
             ),
           ],
         ),
