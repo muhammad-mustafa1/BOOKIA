@@ -53,7 +53,17 @@ class BestSellerListViewItem extends StatelessWidget {
                     style: Styles.textStyle14,
                   ),
                   const SizedBox(height: 3),
-                  const BookRating()
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        '19.99 \$',
+                        style: Styles.textStyle20
+                            .copyWith(fontWeight: FontWeight.bold),
+                      ),
+                      const BookRating()
+                    ],
+                  ),
                 ],
               ),
             )
