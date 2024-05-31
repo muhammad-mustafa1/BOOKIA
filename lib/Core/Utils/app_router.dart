@@ -1,20 +1,26 @@
 import 'package:bookia/Features/Splash/Presentation/Views/splash_view.dart';
+import 'package:bookia/Features/home/presentation/views/book_details_view.dart';
 import 'package:bookia/Features/home/presentation/views/home_view.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
-  static const String kSplashView = '/';
-  static const String kHomeView = '/homeView';
+  static const splashView = '/';
+  static const homeView = '/homeView';
+  static const bookDetailsView = '/bookDetailsView';
 
   static final router = GoRouter(
     routes: [
       GoRoute(
-        path: kHomeView,
+        path: '/',
+        builder: (context, state) => const SplashView(),
+      ),
+      GoRoute(
+        path: homeView,
         builder: (context, state) => const HomeView(),
       ),
       GoRoute(
-        path: '/',
-        builder: (context, state) => const SplashView(),
+        path: bookDetailsView,
+        builder: (context, state) => const BookDetailsView(),
       ),
     ],
   );
