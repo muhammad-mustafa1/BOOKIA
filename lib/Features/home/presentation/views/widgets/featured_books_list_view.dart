@@ -1,4 +1,4 @@
-import 'package:bookia/Features/home/presentation/views/widgets/featured_list_view_item.dart';
+import 'package:bookia/Features/home/presentation/views/widgets/custom_book_item.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
@@ -14,7 +14,7 @@ class FeaturedBooksListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount: 10,
         separatorBuilder: (context, index) => const SizedBox(width: 8),
-        itemBuilder: (context, index) => const FeaturedListViewItem(),
+        itemBuilder: (context, index) => const CustomBookImage(),
       ),
     );
   }

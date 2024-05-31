@@ -1,8 +1,8 @@
 import 'package:bookia/Core/Utils/assets.dart';
 import 'package:flutter/material.dart';
 
-class FeaturedListViewItem extends StatelessWidget {
-  const FeaturedListViewItem({
+class CustomBookImage extends StatelessWidget {
+  const CustomBookImage({
     super.key,
   });
 
@@ -14,7 +14,9 @@ class FeaturedListViewItem extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           image: const DecorationImage(
-              fit: BoxFit.fill, image: AssetImage(AssetsData.bookImage)),
+            fit: BoxFit.fill,
+            image: AssetImage(AssetsData.bookImage),
+          ),
         ),
       ),
     );
