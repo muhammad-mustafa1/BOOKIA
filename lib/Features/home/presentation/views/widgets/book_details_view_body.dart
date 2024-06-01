@@ -1,7 +1,5 @@
-import 'package:bookia/Core/Utils/styles.dart';
 import 'package:bookia/Features/home/presentation/views/widgets/books_details_section.dart';
 import 'package:bookia/Features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
-import 'package:bookia/Features/home/presentation/views/widgets/similar_books_list_view.dart';
 import 'package:bookia/Features/home/presentation/views/widgets/similar_books_section.dart';
 import 'package:flutter/material.dart';
 
