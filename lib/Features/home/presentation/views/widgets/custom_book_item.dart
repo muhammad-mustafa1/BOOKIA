@@ -1,11 +1,11 @@
-import 'package:bookia/Core/Utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class CustomBookImage extends StatelessWidget {
   const CustomBookImage({
     super.key,
+    required this.urlImage,
   });
-
+  final String urlImage;
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -13,9 +13,9 @@ class CustomBookImage extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
-          image: const DecorationImage(
+          image: DecorationImage(
             fit: BoxFit.fill,
-            image: AssetImage(AssetsData.bookImage),
+            image: NetworkImage(urlImage),
           ),
         ),
       ),
