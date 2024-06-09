@@ -22,7 +22,8 @@ class Bookia extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) =>
-              FeaturedBooksCubit(homeRepo: getIt.get<HomeRepoImpl>()),
+              FeaturedBooksCubit(homeRepo: getIt.get<HomeRepoImpl>())
+                ..fetchFeaturedBooks(),
         ),
         BlocProvider(
           create: (context) =>
