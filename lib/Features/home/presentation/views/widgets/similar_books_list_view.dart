@@ -13,7 +13,7 @@ class SimilarBooksListView extends StatelessWidget {
         itemCount: 10,
         separatorBuilder: (context, index) => const SizedBox(width: 10),
         itemBuilder: (context, index) => const CustomBookImage(
-          urlImage: '',
+          imageUrl: '',
         ),
       ),
     );
