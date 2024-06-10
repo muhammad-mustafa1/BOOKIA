@@ -9,7 +9,7 @@ class SearchResultListView extends StatelessWidget {
     return ListView.separated(
         padding: EdgeInsets.zero,
         itemBuilder: (context, index) {
-          return const BookListViewItem();
+          // return const BookListViewItem(bookModel:);
         },
         separatorBuilder: (context, index) {
           return const SizedBox(height: 20);

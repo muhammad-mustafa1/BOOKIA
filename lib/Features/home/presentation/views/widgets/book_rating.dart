@@ -4,8 +4,12 @@ import 'package:flutter/material.dart';
 class BookRating extends StatelessWidget {
   const BookRating({
     super.key,
+    required this.rating,
+    required this.ratingCount,
   });
 
+  final double rating;
+  final int ratingCount;
   @override
   Widget build(BuildContext context) {
     return const Row(
