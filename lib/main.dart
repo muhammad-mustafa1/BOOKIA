@@ -1,7 +1,7 @@
 import 'package:bookia/Core/Utils/app_router.dart';
 import 'package:bookia/Core/Utils/service_locator.dart';
 import 'package:bookia/Features/home/Data/repos/home_repo_impl.dart';
-import 'package:bookia/Features/home/presentation/manager/cubit/newest_books_cubit.dart';
+import 'package:bookia/Features/home/presentation/manager/newest_books_cubit/newest_books_cubit.dart';
 import 'package:bookia/Features/home/presentation/manager/featured_books_cubit/featured_books_cubit.dart';
 import 'package:bookia/constants.dart';
 import 'package:flutter/material.dart';
