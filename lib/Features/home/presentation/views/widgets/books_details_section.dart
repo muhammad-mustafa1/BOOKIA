@@ -5,7 +5,9 @@ import 'package:bookia/Features/home/presentation/views/widgets/custom_book_item
 import 'package:flutter/material.dart';
 
 class BookDetailsSection extends StatelessWidget {
-  const BookDetailsSection({super.key});
+  const BookDetailsSection({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
