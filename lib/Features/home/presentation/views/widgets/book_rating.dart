@@ -12,23 +12,23 @@ class BookRating extends StatelessWidget {
   final int ratingCount;
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(
+        const Icon(
           Icons.star,
           color: Colors.amber,
           size: 14,
         ),
-        SizedBox(width: 6.3),
+        const SizedBox(width: 6.3),
         Text(
-          '4.8',
+          rating.toString(),
           style: Styles.textStyle16,
         ),
-        SizedBox(width: 5),
+        const SizedBox(width: 5),
         Opacity(
           opacity: .5,
-          child: Text('(2390)', style: Styles.textStyle14),
+          child: Text('($ratingCount)', style: Styles.textStyle14),
         )
       ],
     );
