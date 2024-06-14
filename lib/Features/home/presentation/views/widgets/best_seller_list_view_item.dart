@@ -1,6 +1,6 @@
 import 'package:bookia/Core/Utils/app_router.dart';
 import 'package:bookia/Core/Utils/styles.dart';
-import 'package:bookia/Features/home/Data/models/book_model/book_model.dart';
+import 'package:bookia/Core/models/book_model/book_model.dart';
 import 'package:bookia/Features/home/presentation/views/widgets/book_rating.dart';
 import 'package:bookia/Features/home/presentation/views/widgets/custom_book_item.dart';
 import 'package:bookia/constants.dart';

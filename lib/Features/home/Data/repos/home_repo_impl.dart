@@ -1,6 +1,6 @@
 import 'package:bookia/Core/Utils/api_service.dart';
 import 'package:bookia/Core/errors/failures.dart';
-import 'package:bookia/Features/home/Data/models/book_model/book_model.dart';
+import 'package:bookia/Core/models/book_model/book_model.dart';
 import 'package:bookia/Features/home/Data/repos/home_repo.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';

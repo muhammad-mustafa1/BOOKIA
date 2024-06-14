@@ -1,8 +1,7 @@
 import 'package:bookia/Core/Utils/functions/launch_url.dart';
 import 'package:bookia/Core/widgets/custom_button.dart';
-import 'package:bookia/Features/home/Data/models/book_model/book_model.dart';
+import 'package:bookia/Core/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class BookAction extends StatelessWidget {
   const BookAction({super.key, required this.bookModel});

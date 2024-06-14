@@ -1,5 +1,5 @@
 import 'package:bookia/Core/Utils/styles.dart';
-import 'package:bookia/Features/home/Data/models/book_model/book_model.dart';
+import 'package:bookia/Core/models/book_model/book_model.dart';
 import 'package:bookia/Features/home/presentation/views/widgets/book_rating.dart';
 import 'package:bookia/Features/home/presentation/views/widgets/books_action.dart';
 import 'package:bookia/Features/home/presentation/views/widgets/custom_book_item.dart';

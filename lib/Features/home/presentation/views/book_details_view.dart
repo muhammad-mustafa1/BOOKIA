@@ -1,4 +1,4 @@
-import 'package:bookia/Features/home/Data/models/book_model/book_model.dart';
+import 'package:bookia/Core/models/book_model/book_model.dart';
 import 'package:bookia/Features/home/presentation/manager/similler_books_cubit/similler_books_cubit.dart';
 import 'package:bookia/Features/home/presentation/views/widgets/book_details_view_body.dart';
 import 'package:flutter/material.dart';

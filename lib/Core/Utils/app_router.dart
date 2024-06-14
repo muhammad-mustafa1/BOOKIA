@@ -1,6 +1,6 @@
 import 'package:bookia/Core/Utils/service_locator.dart';
 import 'package:bookia/Features/Splash/Presentation/Views/splash_view.dart';
-import 'package:bookia/Features/home/Data/models/book_model/book_model.dart';
+import 'package:bookia/Core/models/book_model/book_model.dart';
 import 'package:bookia/Features/home/Data/repos/home_repo_impl.dart';
 import 'package:bookia/Features/home/presentation/manager/similler_books_cubit/similler_books_cubit.dart';
 import 'package:bookia/Features/home/presentation/views/book_details_view.dart';

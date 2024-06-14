@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:bookia/Features/home/Data/models/book_model/book_model.dart';
+import 'package:bookia/Core/models/book_model/book_model.dart';
 import 'package:bookia/Features/home/Data/repos/home_repo.dart';
 import 'package:equatable/equatable.dart';
 
