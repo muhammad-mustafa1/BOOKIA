@@ -1,3 +1,4 @@
+import 'package:bookia/Core/Utils/styles.dart';
 import 'package:bookia/Core/widgets/custom_error_widget.dart';
 import 'package:bookia/Core/widgets/custom_loading_indicator.dart';
 import 'package:bookia/Features/home/presentation/views/widgets/best_seller_list_view_item.dart';
@@ -12,7 +13,13 @@ class SearchResultListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<SearchCubit, SearchState>(
       builder: (context, state) {
-        if (state is SearchSuccess) {
+        if (state is SearchInitial) {
+          return const Center(
+              child: Text(
+            'Search here to get results',
+            style: Styles.textStyle16,
+          ));
+        } else if (state is SearchSuccess) {
           return ListView.separated(
               padding: EdgeInsets.zero,
               itemBuilder: (context, index) {
