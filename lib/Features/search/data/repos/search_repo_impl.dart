@@ -10,9 +10,10 @@ class SearchRepoImpl implements SearchRepo {
 
   SearchRepoImpl({required this.apiService});
   @override
-  Future<Either<Failure, List<BookModel>>> fetchSearchedBooks() async {
+  Future<Either<Failure, List<BookModel>>> fetchSearchedBooks(
+      {required String query}) async {
     try {
-      var data = await apiService.get(endPoint: 'volumes?q=flutter');
+      var data = await apiService.get(endPoint: 'volumes?q=$query');
       List<BookModel> books = [];
       for (var item in data['items']) {
         books.add(BookModel.fromJson(item));

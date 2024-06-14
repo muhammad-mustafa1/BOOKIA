@@ -5,6 +5,8 @@ import 'package:bookia/Features/home/Data/repos/home_repo_impl.dart';
 import 'package:bookia/Features/home/presentation/manager/similler_books_cubit/similler_books_cubit.dart';
 import 'package:bookia/Features/home/presentation/views/book_details_view.dart';
 import 'package:bookia/Features/home/presentation/views/home_view.dart';
+import 'package:bookia/Features/search/data/repos/search_repo.dart';
+import 'package:bookia/Features/search/presentation/manager/search_cubit/search_cubit.dart';
 import 'package:bookia/Features/search/presentation/views/search_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -27,7 +29,10 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: searchView,
-        builder: (context, state) => const SearchView(),
+        builder: (context, state) => BlocProvider(
+          create: (context) => SearchCubit(searchRepo: getIt.get<SearchRepo>()),
+          child: const SearchView(),
+        ),
       ),
       GoRoute(
         path: bookDetailsView,
