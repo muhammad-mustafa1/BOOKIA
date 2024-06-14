@@ -7,6 +7,7 @@ class CustomBookImage extends StatelessWidget {
     required this.imageUrl,
   });
   final String imageUrl;
+
   @override
   Widget build(BuildContext context) {
     return AspectRatio(

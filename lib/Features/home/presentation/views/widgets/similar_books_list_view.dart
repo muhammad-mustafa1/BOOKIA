@@ -1,9 +1,11 @@
+import 'package:bookia/Core/Utils/app_router.dart';
 import 'package:bookia/Core/widgets/custom_error_widget.dart';
 import 'package:bookia/Core/widgets/custom_loading_indicator.dart';
 import 'package:bookia/Features/home/presentation/manager/similler_books_cubit/similler_books_cubit.dart';
 import 'package:bookia/Features/home/presentation/views/widgets/custom_book_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class SimilarBooksListView extends StatelessWidget {
   const SimilarBooksListView({super.key});
@@ -19,9 +21,16 @@ class SimilarBooksListView extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: state.books.length,
               separatorBuilder: (context, index) => const SizedBox(width: 10),
-              itemBuilder: (context, index) => CustomBookImage(
-                imageUrl:
-                    state.books[index].volumeInfo!.imageLinks?.thumbnail ?? '',
+              itemBuilder: (context, index) => GestureDetector(
+                onTap: () {
+                  GoRouter.of(context).push(AppRouter.bookDetailsView,
+                      extra: state.books[index]);
+                },
+                child: CustomBookImage(
+                  imageUrl:
+                      state.books[index].volumeInfo!.imageLinks?.thumbnail ??
+                          '',
+                ),
               ),
             ),
           );
