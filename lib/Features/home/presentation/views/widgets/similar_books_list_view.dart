@@ -37,7 +37,15 @@ class SimilarBooksListView extends StatelessWidget {
         } else if (state is SimillerBooksFailure) {
           return CustomErrorWidget(errorMessage: state.errorMessage);
         } else {
-          return const CustomLoadingIndicator();
+          return SizedBox(
+            height: MediaQuery.of(context).size.height * .15,
+            child: ListView.separated(
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) =>
+                    const FeaturedBooksShimmerLoadingItem(),
+                separatorBuilder: (context, index) => const SizedBox(width: 10),
+                itemCount: 10),
+          );
         }
       },
     );

@@ -22,14 +22,17 @@ class BestSellerListView extends StatelessWidget {
                 bookModel: state.books[index],
               );
             },
-            separatorBuilder: (context, index) {
-              return const SizedBox(height: 20);
-            },
+            separatorBuilder: (context, index) => const SizedBox(height: 20),
           );
         } else if (state is NewestBooksFailure) {
           return CustomErrorWidget(errorMessage: state.errorMessage);
         } else {
-          return const CustomLoadingIndicator();
+          return ListView.separated(
+            itemCount: 10,
+            separatorBuilder: (context, index) => const SizedBox(height: 20),
+            itemBuilder: (context, index) =>
+                const NewestBooksShimmerLoadingItem(),
+          );
         }
       },
     );

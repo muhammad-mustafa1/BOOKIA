@@ -40,7 +40,15 @@ class FeaturedBooksListView extends StatelessWidget {
         } else if (state is FeaturedBooksFailure) {
           return CustomErrorWidget(errorMessage: state.errorMessage);
         } else {
-          return const Center(child: CustomLoadingIndicator());
+          return SizedBox(
+            height: MediaQuery.of(context).size.height * .3,
+            child: ListView.separated(
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) =>
+                    const FeaturedBooksShimmerLoadingItem(),
+                separatorBuilder: (context, index) => const SizedBox(width: 8),
+                itemCount: 10),
+          );
         }
       },
     );
