@@ -5,7 +5,7 @@ Future<void> launchCustomUrl(context, String? link) async {
   if (link != null) {
     Uri url = Uri.parse(link);
     if (!await canLaunchUrl(url)) {
-      customSnackBar(context, text: 'canot launch $link');
+      customSnackBar(context, text: 'Cannot launch $link');
     } else {
       launchUrl(
         url,

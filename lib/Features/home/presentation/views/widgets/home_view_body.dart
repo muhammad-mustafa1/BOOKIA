@@ -15,6 +15,7 @@ class HomeViewBody extends StatelessWidget {
     return RefreshIndicator(
       onRefresh: () async {
         await onRefresh(context);
+        return await Future.delayed(const Duration(seconds: 1));
       },
       child: const CustomScrollView(
         physics: BouncingScrollPhysics(),
