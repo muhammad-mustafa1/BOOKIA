@@ -10,11 +10,12 @@ class HomeRepoImpl implements HomeRepo {
   HomeRepoImpl({required this.apiService});
   @override
   //Fetches the newest books from the API.
-  Future<Either<Failure, List<BookModel>>> fetchNewestBooks() async {
+  Future<Either<Failure, List<BookModel>>> fetchNewestBooks(
+      {required String category}) async {
     try {
       var data = await apiService.get(
           endPoint:
-              'volumes?Filtering=free-ebooks&Sorting=newest&q=subject:sports');
+              'volumes?Filtering=free-ebooks&Sorting=newest&q=subject:$category');
       List<BookModel> books = [];
       for (var item in data['items']) {
         books.add(BookModel.fromJson(item));
@@ -33,8 +34,8 @@ class HomeRepoImpl implements HomeRepo {
   @override
   Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks() async {
     try {
-      var data = await apiService.get(
-          endPoint: 'volumes?Filtering=free-ebooks&q=subject:computer');
+      var data =
+          await apiService.get(endPoint: 'volumes?Filtering=free-ebooks&q=""');
       List<BookModel> books = [];
       for (var item in data['items']) {
         books.add(BookModel.fromJson(item));
@@ -56,7 +57,7 @@ class HomeRepoImpl implements HomeRepo {
     try {
       var data = await apiService.get(
           endPoint:
-              'volumes?Filtering=free-ebooks&Sorting:relevance&q=intitle:$query');
+              'volumes?Filtering=free-ebooks&Sorting:relevance&q=inauthor:$query');
       List<BookModel> books = [];
       for (var item in data['items']) {
         books.add(BookModel.fromJson(item));

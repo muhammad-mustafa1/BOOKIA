@@ -10,13 +10,13 @@ class NewestBooksCubit extends Cubit<NewestBooksState> {
   NewestBooksCubit({required this.homeRepo}) : super(NewestBooksInitial());
 
   final HomeRepo homeRepo;
-  Future<void> fetchNewestBooks() async {
+  Future<void> fetchNewestBooks({required String category}) async {
     if (!await checkInternetConnection()) {
       emit(const NewestBooksFailure(errorMessage: 'No Internet Connection'));
       return;
     }
     emit(NewestBooksLoading());
-    var result = await homeRepo.fetchNewestBooks();
+    var result = await homeRepo.fetchNewestBooks(category: category);
     result.fold(
       (failure) {
         emit(
