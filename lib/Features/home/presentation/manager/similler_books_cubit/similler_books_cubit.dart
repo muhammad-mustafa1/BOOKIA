@@ -11,9 +11,9 @@ class SimillerBooksCubit extends Cubit<SimillerBooksState> {
   }) : super(SimillerBooksInitial());
 
   final HomeRepo homeRepo;
-  Future<void> fetchSimillerBooks({required String category}) async {
+  Future<void> fetchSimillerBooks({required String query}) async {
     emit(SimillerBooksLoading());
-    var result = await homeRepo.fetchSimillerBooks(category: category);
+    var result = await homeRepo.fetchSimillerBooks(query: query);
     result.fold(
       (failure) {
         emit(SimillerBooksFailure(errorMessage: failure.errorMessage));
