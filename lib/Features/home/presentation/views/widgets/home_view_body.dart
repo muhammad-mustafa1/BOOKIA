@@ -17,10 +17,10 @@ class HomeViewBody extends StatelessWidget {
         await onRefresh(context);
         return await Future.delayed(const Duration(seconds: 1));
       },
-      child: const CustomScrollView(
+      child: CustomScrollView(
         physics: BouncingScrollPhysics(),
         slivers: [
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -62,13 +62,16 @@ class HomeViewBody extends StatelessWidget {
               ],
             ),
           ),
-          SliverFillRemaining(
-            // use nested list view and scroll without shrink wrap
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30),
-              child: NewestBooksListView(),
-            ),
-          )
+          SliverList(
+              delegate: SliverChildBuilderDelegate(
+            childCount: 1,
+            (context, index) {
+              return const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: NewestBooksListView(),
+              );
+            },
+          )),
         ],
       ),
     );

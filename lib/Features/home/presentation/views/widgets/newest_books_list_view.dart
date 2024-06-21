@@ -16,6 +16,7 @@ class NewestBooksListView extends StatelessWidget {
           return ListView.separated(
             itemCount: state.books.length,
             padding: EdgeInsets.zero,
+            shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return BookListViewItem(
@@ -28,7 +29,9 @@ class NewestBooksListView extends StatelessWidget {
           return CustomErrorWidget(errorMessage: state.errorMessage);
         } else {
           return ListView.separated(
-            itemCount: 10,
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemCount: 5,
             separatorBuilder: (context, index) => const SizedBox(height: 20),
             itemBuilder: (context, index) =>
                 const NewestBooksShimmerLoadingItem(),
