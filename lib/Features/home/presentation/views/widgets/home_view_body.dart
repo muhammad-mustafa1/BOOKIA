@@ -18,7 +18,7 @@ class HomeViewBody extends StatelessWidget {
         return await Future.delayed(const Duration(seconds: 1));
       },
       child: CustomScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         slivers: [
           const SliverToBoxAdapter(
             child: Column(

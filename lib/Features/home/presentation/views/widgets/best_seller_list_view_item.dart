@@ -58,9 +58,9 @@ class BookListViewItem extends StatelessWidget {
                         style: Styles.textStyle20
                             .copyWith(fontWeight: FontWeight.bold),
                       ),
-                      const BookRating(
-                        rating: 0,
-                        ratingCount: 0,
+                      BookRating(
+                        rating: bookModel.volumeInfo!.averageRating ?? 0,
+                        ratingCount: bookModel.volumeInfo!.ratingsCount ?? 0,
                       )
                     ],
                   ),

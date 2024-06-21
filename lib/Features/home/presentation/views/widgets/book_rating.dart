@@ -8,8 +8,8 @@ class BookRating extends StatelessWidget {
     required this.ratingCount,
   });
 
-  final double rating;
-  final int ratingCount;
+  final num rating;
+  final num ratingCount;
   @override
   Widget build(BuildContext context) {
     return Row(

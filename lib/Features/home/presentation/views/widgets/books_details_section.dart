@@ -37,9 +37,9 @@ class BookDetailsSection extends StatelessWidget {
                   fontStyle: FontStyle.italic,
                 ))),
         const SizedBox(height: 18),
-        const BookRating(
-          rating: 0,
-          ratingCount: 0,
+        BookRating(
+          rating: bookModel.volumeInfo!.averageRating ?? 0,
+          ratingCount: bookModel.volumeInfo!.ratingsCount ?? 0,
         ),
         const SizedBox(height: 37),
         BookAction(
