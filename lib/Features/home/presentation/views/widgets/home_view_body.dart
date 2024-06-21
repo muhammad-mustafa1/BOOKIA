@@ -79,6 +79,6 @@ class HomeViewBody extends StatelessWidget {
 
   onRefresh(BuildContext context) {
     BlocProvider.of<FeaturedBooksCubit>(context).fetchFeaturedBooks();
-    BlocProvider.of<NewestBooksCubit>(context).fetchNewestBooks(category: '');
+    BlocProvider.of<NewestBooksCubit>(context).fetchNewestBooks(category: '-');
   }
 }

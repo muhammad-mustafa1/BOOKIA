@@ -28,7 +28,7 @@ class Bookia extends StatelessWidget {
         BlocProvider(
           create: (context) =>
               NewestBooksCubit(homeRepo: getIt.get<HomeRepoImpl>())
-                ..fetchNewestBooks(category: ''),
+                ..fetchNewestBooks(category: '-'),
         ),
       ],
       child: MaterialApp.router(

@@ -31,7 +31,7 @@ class _CategoryButtonListViewState extends State<CategoryButtonListView> {
                 await BlocProvider.of<NewestBooksCubit>(context)
                     .fetchNewestBooks(
                         category: widget.categoryList[index] == 'All'
-                            ? ''
+                            ? '-'
                             : widget.categoryList[index]);
               },
               backgroundColor: currentindex == index
